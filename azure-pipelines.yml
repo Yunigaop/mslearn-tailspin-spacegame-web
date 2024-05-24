@@ -12,7 +12,5 @@ variables:
     buildConfiguration: 'Release'
 
 steps:
-- task: CmdLine@2
-  inputs:
-    script: 'dotnet build --configuration $(buildConfiguration)'
-    workingDirectory: '.csproj'
+  - script: dotnet build --configuration $(buildConfiguration)
+    displayName: 'dotnet build $(buildConfiguration)'
